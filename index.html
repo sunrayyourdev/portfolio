@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jake Onquit</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar">
+        <span onclick="scrollToSection('about')">Jake Onquit</span>
+        <span onclick="scrollToSection('about')">About</span>
+        <span onclick="scrollToSection('project')">Projects</span>
+        <span onclick="scrollToSection('contact')">Contact</span>
+        <span><a href="resume.pdf" download="JakeOnquit.pdf">Resume</a></span> <!-- Added id to Resume span -->
+    </div>
+    <div>
+        <div id="about">
+            <img src="/1738758452877.jpg" alt="Jake">
+            <p>
+                Hi! I am Jake, a software developer studying Information Technology at Nanyang Polytechnic.
+                My goal is to create solutions that positively impact the world around us.
+                Below are some of my projects, including a sustainable jewelry store, 
+                investing academy, manga library and more.
+            </p>
+        </div>
+        <div id="project">
+            <div class="project-container">
+                <div>
+                    <h3>Sustainable Jewelry Store</h3>
+                    <p>An online store that sells eco-friendly jewelry.</p>
+                </div>
+                <div>
+                    <h3>Investing Academy</h3>
+                    <p>A platform to learn about investing and financial literacy.</p>
+                </div>
+                <div>
+                    <h3>Manga Library</h3>
+                    <p>A digital library for manga enthusiasts.</p>
+                </div>
+            </div>
+        </div>
+        <div id="contact">
+            <h3>Contact Me</h3>
+            <p>onquitjake@gmail.com</p>
+            <p>
+                <a href="https://www.linkedin.com/in/jake-onquit-20a2252b3/" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" style="width: 20px; height: 20px;">
+                </a>
+                <a href="https://www.instagram.com/onquitjake/" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" style="width: 20px; height: 20px;">
+                </a>
+                <a href="https://github.com/sunrayyourdev" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" style="width: 20px; height: 20px;">
+                </a>
+            </p>
+            <p>
+                <a href="resume.pdf" download="JakeOnquit.pdf">Download Resume</a> <!-- Added download link for resume -->
+            </p>
+        </div>
+    </div>
+    <script src="script.js"></script> <!-- Added script.js -->
+</body>
+</html>

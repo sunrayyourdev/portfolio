@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 14px; /* Decreased font size */
+    background-color: #2c3e50; /* Dark blue background color */
+}
+
+.navbar {
+    background-color: #34495e; /* Darker grey color */
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: flex-start; /* Changed to move items to the left */
+    gap: 20px; /* Added gap between items */
+    align-items: center;
+}
+
+.navbar span {
+    margin: 0;
+    cursor: pointer;
+    font-size: 1em; /* Adjusted font size */
+}
+
+.navbar span a {
+    color: white; /* Set resume link color to white */
+}
+
+#about {
+    background-color: #ecf0f1; /* Light grey color */
+    padding: 20px;
+    text-align: center;
+}
+
+#about img {
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px; /* Added gap between image and paragraph */
+}
+
+#about p {
+    width: 50%;
+    margin: 0 auto; /* Center the paragraph */
+}
+
+#project {
+    background-color: #bdc3c7; /* Grey color */
+    padding: 20px;
+}
+
+#contact {
+    background-color: #95a5a6; /* Darker grey color */
+    padding: 20px;
+}
+
+#contact a {
+    margin-right: 5px; /* Added spacing between icons */
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-container div {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none; /* Remove underline from links */
+}
