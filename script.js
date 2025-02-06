@@ -15,5 +15,12 @@ function handleResize() {
     }
 }
 
+function setBaseFontSize() {
+    document.documentElement.style.fontSize = '16px'; // Set base font size to 16px
+}
+
 window.addEventListener('resize', handleResize);
-window.addEventListener('load', handleResize);
+window.addEventListener('load', () => {
+    handleResize();
+    setBaseFontSize();
+});
