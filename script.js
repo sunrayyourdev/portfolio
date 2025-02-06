@@ -18,7 +18,7 @@ function handleResize() {
 function setGitHubPageFontSize() {
     const githubLinks = document.querySelectorAll('a[href*="github.com"]');
     githubLinks.forEach(link => {
-        link.style.fontSize = '1.125rem'; // Match the base font size
+        link.style.fontSize = '1rem'; // Reverted to match original base font size
     });
 }
 
