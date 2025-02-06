@@ -82,6 +82,16 @@ body {
     }
 }
 
+@media (max-width: 767px) {
+    .project-container {
+        flex-direction: column;
+    }
+
+    .project-container div {
+        width: 100%;
+    }
+}
+
 a {
     text-decoration: none; /* Remove underline from links */
 }
