@@ -23,4 +23,5 @@ window.addEventListener('resize', handleResize);
 window.addEventListener('load', () => {
     handleResize();
     setBaseFontSize();
+    setGitHubPageFontSize(); // Call the function on load
 });
