@@ -14,3 +14,16 @@ function handleResize() {
         projectContainer.style.flexDirection = 'row';
     }
 }
+
+function setGitHubPageFontSize() {
+    const githubLinks = document.querySelectorAll('a[href*="github.com"]');
+    githubLinks.forEach(link => {
+        link.style.fontSize = '1.125rem'; // Match the base font size
+    });
+}
+
+window.addEventListener('load', () => {
+    handleResize();
+    setBaseFontSize();
+    setGitHubPageFontSize(); // Call the function on load
+});
