@@ -2,10 +2,6 @@ function scrollToSection(id) {
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
 }
 
-document.getElementById('resume').addEventListener('click', function() {
-    window.open('/path/to/resume.pdf', '_blank');
-});
-
 function handleResize() {
     const projectContainer = document.querySelector('.project-container');
     if (window.innerWidth < 768) {
@@ -22,8 +18,26 @@ function setGitHubPageFontSize() {
     });
 }
 
+// Modal functionality for JewelRE
+const jewelreBtn = document.getElementById('jewelreBtn');
+const jewelreModal = document.getElementById('jewelreModal');
+const closeBtn = jewelreModal.querySelector('.close');
+
+jewelreBtn.addEventListener('click', () => {
+    jewelreModal.style.display = 'flex'; // Display as flex to center modal
+});
+
+closeBtn.addEventListener('click', () => {
+    jewelreModal.style.display = 'none';
+});
+
+window.addEventListener('click', (event) => {
+    if (event.target === jewelreModal) {
+        jewelreModal.style.display = 'none';
+    }
+});
+
 window.addEventListener('load', () => {
     handleResize();
-    setBaseFontSize();
     setGitHubPageFontSize(); // Call the function on load
 });
