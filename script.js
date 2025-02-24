@@ -11,13 +11,6 @@ function handleResize() {
     }
 }
 
-function setGitHubPageFontSize() {
-    const githubLinks = document.querySelectorAll('a[href*="github.com"]');
-    githubLinks.forEach(link => {
-        link.style.fontSize = '1rem'; // Reverted to match original base font size
-    });
-}
-
 // Modal functionality for JewelRE
 const jewelreBtn = document.getElementById('jewelreBtn');
 const jewelreModal = document.getElementById('jewelreModal');
@@ -39,5 +32,4 @@ window.addEventListener('click', (event) => {
 
 window.addEventListener('load', () => {
     handleResize();
-    setGitHubPageFontSize(); // Call the function on load
 });
