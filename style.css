@@ -68,7 +68,7 @@ body {
     gap: 1.25rem; /* Reverted gap */
 }
 
-.project-container div {
+.project-preview {
     background-color: white;
     padding: 0.625rem; /* Reverted padding */
     border: 1px solid #ccc;

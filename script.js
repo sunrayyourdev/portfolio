@@ -18,6 +18,13 @@ const closeBtn = jewelreModal.querySelector('.close');
 
 jewelreBtn.addEventListener('click', () => {
     jewelreModal.style.display = 'flex'; // Display as flex to center modal
+    // Dynamically size the iframe to fit within the modal-content
+    const modalContent = jewelreModal.querySelector('.modal-content');
+    const iframe = modalContent.querySelector('iframe');
+    const desiredWidth = modalContent.clientWidth*0.9;
+    const desiredHeight = desiredWidth * (9 / 16); // 16:9 aspect ratio
+    iframe.style.width = desiredWidth + 'px';
+    iframe.style.height = desiredHeight + 'px';
 });
 
 closeBtn.addEventListener('click', () => {
@@ -27,6 +34,18 @@ closeBtn.addEventListener('click', () => {
 window.addEventListener('click', (event) => {
     if (event.target === jewelreModal) {
         jewelreModal.style.display = 'none';
+    }
+});
+
+// Update iframe size on window resize when modal is visible
+window.addEventListener('resize', () => {
+    if (jewelreModal.style.display !== 'none') {
+        const modalContent = jewelreModal.querySelector('.modal-content');
+        const iframe = modalContent.querySelector('iframe');
+        const desiredWidth = modalContent.clientWidth*0.9;
+        const desiredHeight = desiredWidth * (9 / 16);
+        iframe.style.width = desiredWidth + 'px';
+        iframe.style.height = desiredHeight + 'px';
     }
 });
 
