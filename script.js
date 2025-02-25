@@ -37,18 +37,6 @@ window.addEventListener('click', (event) => {
     }
 });
 
-// Update iframe size on window resize when modal is visible
-window.addEventListener('resize', () => {
-    if (jewelreModal.style.display !== 'none') {
-        const modalContent = jewelreModal.querySelector('.modal-content');
-        const iframe = modalContent.querySelector('iframe');
-        const desiredWidth = modalContent.clientWidth*0.9;
-        const desiredHeight = desiredWidth * (9 / 16);
-        iframe.style.width = desiredWidth + 'px';
-        iframe.style.height = desiredHeight + 'px';
-    }
-});
-
 window.addEventListener('load', () => {
     handleResize();
 });
