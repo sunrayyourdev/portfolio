@@ -34,6 +34,7 @@ body {
 #about {
     background-color: #ecf0f1; /* Light grey color */
     padding: 1.25rem; /* Reverted padding */
+    padding-bottom: 2rem; /* Added extra bottom padding */
     text-align: center;
 }
 
@@ -51,11 +52,13 @@ body {
 #project {
     background-color: #bdc3c7; /* Grey color */
     padding: 1.25rem; /* Reverted padding */
+    padding-bottom: 2rem; /* Added extra bottom padding */
 }
 
 #contact {
     background-color: #95a5a6; /* Darker grey color */
     padding: 1.25rem; /* Reverted padding */
+    padding-bottom: 2rem; /* Added extra bottom padding */
 }
 
 #contact a {
