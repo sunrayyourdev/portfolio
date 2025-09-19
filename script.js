@@ -40,3 +40,5 @@ window.addEventListener('click', (event) => {
 window.addEventListener('load', () => {
     handleResize();
 });
+
+document.getElementById('currentYear').textContent = new Date().getFullYear();
