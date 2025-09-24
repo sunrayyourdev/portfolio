@@ -15,7 +15,7 @@ body {
     color: white;
     padding: 1rem; /* Reverted padding */
     display: flex;
-    justify-content: flex-start; /* Changed to move items to the left */
+    justify-content:center;/* Changed to move items to the left */
     gap: 1.25rem; /* Reverted gap */
     align-items: center;
     flex-wrap: wrap; /* Allow wrapping for responsiveness */
@@ -131,5 +131,19 @@ body {
 }
 
 a {
+    text-decoration: none;
+}
+
+.nav-link {
     text-decoration: none; /* Remove underline from links */
+    color: white
+}
+
+.button-link {
+    width: 25px; 
+    height: 25px;
+}
+
+#description {
+    max-width: 50vh;
 }
