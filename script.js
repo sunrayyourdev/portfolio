@@ -11,6 +11,50 @@ function handleResize() {
     }
 }
 
+// Ensure all project cards have equal height, including those hidden initially
+function equalizeProjectCardHeights() {
+    const cards = Array.from(document.querySelectorAll('.project-preview'));
+    if (!cards.length) return;
+
+    // Reset heights to natural before measuring
+    cards.forEach(card => {
+        card.style.height = 'auto';
+    });
+
+    let maxHeight = 0;
+    const temporarilyShown = [];
+
+    // Measure each card; temporarily reveal hidden ones off-screen
+    cards.forEach(card => {
+        const wasHidden = card.classList.contains('hidden');
+        if (wasHidden) {
+            card.classList.remove('hidden');
+            // Keep it from flashing by hiding and removing from flow
+            card.style.visibility = 'hidden';
+            card.style.position = 'absolute';
+            card.style.left = '-9999px';
+            temporarilyShown.push(card);
+        }
+
+        const rect = card.getBoundingClientRect();
+        const height = rect.height;
+        if (height > maxHeight) maxHeight = height;
+    });
+
+    // Apply the maximum height to all cards
+    cards.forEach(card => {
+        card.style.height = `${maxHeight}px`;
+    });
+
+    // Re-hide any cards we temporarily revealed
+    temporarilyShown.forEach(card => {
+        card.style.visibility = '';
+        card.style.position = '';
+        card.style.left = '';
+        card.classList.add('hidden');
+    });
+}
+
 // Modal functionality for JewelRE
 const jewelreBtn = document.getElementById('jewelreBtn');
 const jewelreModal = document.getElementById('jewelreModal');
@@ -39,6 +83,41 @@ window.addEventListener('click', (event) => {
 
 window.addEventListener('load', () => {
     handleResize();
+    // Wait a frame to ensure fonts/layout settle, then equalize
+    requestAnimationFrame(() => equalizeProjectCardHeights());
 });
 
 document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+// View more button toggles the 4th project card
+const viewMoreBtn = document.getElementById('viewMoreBtn');
+const project4 = document.getElementById('project4');
+
+if (viewMoreBtn && project4) {
+    viewMoreBtn.addEventListener('click', () => {
+        const isHidden = project4.classList.contains('hidden');
+        if (isHidden) {
+            project4.classList.remove('hidden');
+            viewMoreBtn.textContent = 'View less';
+            viewMoreBtn.setAttribute('aria-expanded', 'true');
+            // Scroll into view if on small screens so users notice the reveal
+            if (window.innerWidth < 768) {
+                project4.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+            // Re-equalize after revealing
+            requestAnimationFrame(() => equalizeProjectCardHeights());
+        } else {
+            project4.classList.add('hidden');
+            viewMoreBtn.textContent = 'View more';
+            viewMoreBtn.setAttribute('aria-expanded', 'false');
+            // Re-equalize after hiding
+            requestAnimationFrame(() => equalizeProjectCardHeights());
+        }
+    });
+}
+
+// Recompute equal heights on resize
+window.addEventListener('resize', () => {
+    handleResize();
+    requestAnimationFrame(() => equalizeProjectCardHeights());
+});

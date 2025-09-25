@@ -26,34 +26,48 @@
             <h2>Projects</h2>
             <div class="project-container">
                 <div class="project-preview">
+                    <h3>Shelfytics</h3>
+                    <p>A computer vision application for SKU tracking</p>
+                    <div class="project-links">
+                        <a href="https://github.com/Shelflytics" target="_blank">
+                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="button-link">
+                        </a>
+                    </div>
+                </div>
+                <div class="project-preview">
                     <h3>JewelRE</h3>
-                    <p>An online store that sells eco-friendly jewelry.</p>
-                    <button id="jewelreBtn">Read More</button>
+                    <p>An enterprise application for a sustainable jewelry store.</p>
+                    <div class="project-links">
+                        <button id="jewelreBtn" class="project-button">Read More</button>
+                    </div>
                 </div>
                 <div class="project-preview">
                     <h3>InvestAcademy</h3>
                     <p>A platform to learn about investing and financial literacy.</p>
-                    <p>
+                    <div class="project-links">
                         <a href="https://github.com/ImranZak/InvestAcademy" target="_blank">
                             <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="button-link">
                         </a>
                         <a href="https://www.linkedin.com/feed/update/urn:li:activity:7253678731204993024/">
                             <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="button-link">
                         </a>
-                    </p>
+                    </div>
                 </div>
-                <div class="project-preview">
+                <div class="project-preview hidden" id="project4">
                     <h3>WishSim</h3>
                     <p>A Genshin Impact wishing simulator.</p>
-                    <p>
+                    <div class="project-links">
                         <a href="https://sunrayyourdev.github.io/wish-simulator/" target="_blank">
-                            <button>View Site</button>
+                            <button class="project-button" >View Site</button>
                         </a>
                         <a href="https://github.com/sunrayyourdev/wish-simulator" target="_blank">
                             <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" class="button-link" alt="GitHub">
                         </a>
-                    </p>
+                    </div>
                 </div>
+            </div>
+            <div class="view-more-container">
+                <button id="viewMoreBtn" class="view-more-btn" aria-expanded="false" aria-controls="project4">View more</button>
             </div>
         </div>
         <div id="contact">
@@ -70,6 +84,7 @@
                     <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" class="button-link">
                 </a>
             </p>
+            <p><a href="resume.pdf" target="_blank" rel="noopener noreferrer" id="contact-resume"aria-label="Open resume in a new tab">Download Resume</a></p>
             <p class="trademark">© <span id="currentYear"></span> by Jake Onquit</p>
         </div>
     </div>
