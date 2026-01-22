@@ -8,54 +8,48 @@
 </head>
 <body>
     <div class="navbar">
-        <span onclick="scrollToSection('about')">Jake Onquit</span>
-        <span onclick="scrollToSection('about')">About</span>
+        <span onclick="scrollToSection('home')">Home</span>
         <span onclick="scrollToSection('project')">Projects</span>
         <span onclick="scrollToSection('contact')">Contact</span>
-        <a href="resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-link" aria-label="Open resume in a new tab">Resume</a>
+        <a href="Jake_Onquit_Resume.pdf" target="_blank" rel="noopener noreferrer" class="nav-link" aria-label="Open resume in a new tab">Resume</a>
     </div>
     <div>
-        <div id="about">
+        <div id="home" class="section">
             <h2>Jake Onquit </h2>
-            <img src="https://media.licdn.com/dms/image/v2/D5603AQEJWdvXjQgi0g/profile-displayphoto-shrink_400_400/B56ZiC7EM0H0Ag-/0/1754543180997?e=1760572800&v=beta&t=ghIX7FzScExK16XUQkK_B7feGHqtgN2i2TBy0wGv_bA" alt="Jake">
+            <img src="Jake_Onquit_photo.jpg" alt="Jake">
             <p id="description">
-                Hi, I'm Jake, a student developer experienced in Full Stack and AI. Take a look at some of my projects below. Ingat!
-            </p>
+                A student software developer focused full stack development.
         </div>
-        <div id="project">
+        <div id="project" class="section">
             <h2>Projects</h2>
             <div class="project-container">
+                <div class="project-preview" id="project6">
+                    <span class="date-tag" aria-label="Project date">Jan 2026</span>
+                    <h3>VCT History Quiz</h3>
+                    <p>A quiz game to test your VCT history knowledge.</p>
+                    <div class="project-links">
+                        <a href="https://sunrayyourdev.github.io/vct-history-quiz/" target="_blank">
+                            <button class="project-button" >View Site</button>
+                        </a>
+                        <a href="https://github.com/sunrayyourdev/vct-history-quiz" target="_blank">
+                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" class="button-link" alt="GitHub">
+                        </a>
+                    </div>
+                </div>
                 <div class="project-preview">
+                    <span class="date-tag" aria-label="Project date">Aug 2025</span>
                     <h3>Shelfytics</h3>
-                    <p>A computer vision application for SKU tracking</p>
+                    <p>A computer vision application for SKU tracking.</p>
                     <div class="project-links">
                         <a href="https://github.com/Shelflytics" target="_blank">
                             <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="button-link">
                         </a>
                     </div>
                 </div>
-                <div class="project-preview">
-                    <h3>JewelRE</h3>
-                    <p>An enterprise application for a sustainable jewelry store.</p>
-                    <div class="project-links">
-                        <button id="jewelreBtn" class="project-button">Read More</button>
-                    </div>
-                </div>
-                <div class="project-preview">
-                    <h3>InvestAcademy</h3>
-                    <p>A platform to learn about investing and financial literacy.</p>
-                    <div class="project-links">
-                        <a href="https://github.com/ImranZak/InvestAcademy" target="_blank">
-                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="button-link">
-                        </a>
-                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7253678731204993024/">
-                            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="button-link">
-                        </a>
-                    </div>
-                </div>
                 <div class="project-preview" id="project4">
+                    <span class="date-tag" aria-label="Project date">Mar 2025</span>
                     <h3>WishSim</h3>
-                    <p>A Genshin Impact wishing simulator.</p>
+                    <p>A Genshin Impact wishing simulator game.</p>
                     <div class="project-links">
                         <a href="https://sunrayyourdev.github.io/wish-simulator/" target="_blank">
                             <button class="project-button" >View Site</button>
@@ -65,30 +59,44 @@
                         </a>
                     </div>
                 </div>
+                <div class="project-preview">
+                    <span class="date-tag" aria-label="Project date">Feb 2025</span>
+                    <h3>JewelRE</h3>
+                    <p>An e-commerce store for sustainable jewelry.</p>
+                    <div class="project-links">
+                        <button id="jewelreBtn" class="project-button">Read More</button>
+                    </div>
+                </div>
+                <div class="project-preview">
+                    <span class="date-tag" aria-label="Project date">Sep 2024</span>
+                    <h3>InvestAcademy</h3>
+                    <p>A financial literacy learning platform.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/ImranZak/InvestAcademy" target="_blank">
+                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="button-link">
+                        </a>
+                        <a href="https://www.linkedin.com/feed/update/urn:li:activity:7253678731204993024/">
+                            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="button-link">
+                        </a>
+                    </div>
+                </div>
                 <div class="project-preview" id="project5">
+                    <span class="date-tag" aria-label="Project date">Aug 2024</span>
                     <h3>Sustainability Management Hub</h3>
-                    <p>A sustainable resident welfare hub</p>
+                    <p>A sustainable resident welfare portal.</p>
                     <div class="project-links">
                         <div class="project-links">
                             <button id="smhBtn" class="project-button">Read More</button>
                         </div>
                     </div>
                 </div>
-                <div class="project-preview" id="project6">
-                    <h3>AnimeReview</h3>
-                    <p>An anime review website</p>
-                    <div class="project-links">
-                        <a href="https://github.com/sunrayyourdev/anime-review" target="_blank">
-                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" class="button-link" alt="GitHub">
-                        </a>
-                    </div>
-                </div>
+                
             </div>
             <!-- <div class="view-more-container">
                 <button id="viewMoreBtn" class="view-more-btn" aria-expanded="false" aria-controls="project4">View more</button>
             </div> -->
         </div>
-        <div id="contact">
+        <div id="contact" class="section">
             <h2>Contact</h2>
             <p><a href="mailto:onquitjake@gmail.com">onquitjake@gmail.com</a></p>
             <p>
@@ -102,7 +110,7 @@
                     <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" alt="YouTube" class="button-link">
                 </a>
             </p>
-            <p><a href="resume.pdf" target="_blank" rel="noopener noreferrer" id="contact-resume"aria-label="Open resume in a new tab">Download Resume</a></p>
+            <p><a href="Jake_Onquit_Resume.pdf" target="_blank" rel="noopener noreferrer" id="contact-resume"aria-label="Open resume in a new tab">Download Resume</a></p>
             <p class="trademark">© <span id="currentYear"></span> by Jake Onquit</p>
         </div>
     </div>
@@ -113,7 +121,7 @@
             <p>
                 For this project, I was in-charge of user <strong>login</strong> and <strong>authentication</strong>. 
                 Some of my advanced features include Google Sign In, TOTP-based two factor authentication (2FA) and password strength checklist.
-                <!-- add more here about profile management(?) -->
+                <!-- add more here home profile management(?) -->
             </p>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/U-STVKpjq_4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>

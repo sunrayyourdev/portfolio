@@ -31,38 +31,62 @@ body {
     color: white; /* Set resume link color to white */
 }
 
-#about {
+#home {
     background-color: #ecf0f1; /* Light grey color */
-    padding: 1.25rem; /* Reverted padding */
-    padding-bottom: 2rem; /* Added extra bottom padding */
     text-align: center;
 }
 
-#about img {
+#home img {
     max-width: 9.375rem; /* Reverted max-width */
     border-radius: 50%;
     margin-bottom: 1.25rem; /* Reverted margin-bottom */
 }
 
-#about p {
+#home p {
     width: 80%;
     margin: 0 auto; /* Center the paragraph */
 }
 
 #project {
     background-color: #bdc3c7; /* Grey color */
-    padding: 1.25rem; /* Reverted padding */
-    padding-bottom: 2rem; /* Added extra bottom padding */
+
 }
 
 #contact {
     background-color: #95a5a6; /* Darker grey color */
-    padding: 1.25rem; /* Reverted padding */
-    padding-bottom: 2rem; /* Added extra bottom padding */
+
+}
+
+/* Add more space beneath each section */
+.section {
+    padding: 1rem 1rem 3rem; /* increased for clearer separation */
+}
+
+/* Center section titles */
+#project h2,
+#contact h2 {
+    text-align: center;
 }
 
 #contact a {
-    margin-right: 0.3125rem; /* Use rem for margin-right */
+    margin: 0 0.3125rem; /* Balanced horizontal spacing for contact links */
+}
+
+#contact p {
+    text-align: center; /* Center paragraphs and inline link content */
+
+/* Skills & Experience sections to match existing style */
+#skills {
+    background-color: #ecf0f1; /* Light grey to match home */
+    padding: 1.25rem;
+    padding-bottom: 2rem;
+}
+
+#experience {
+    background-color: #bdc3c7; /* Same as projects for cohesion */
+    padding: 1.25rem;
+    padding-bottom: 2rem;
+}
 }
 
 .project-container {
@@ -71,13 +95,22 @@ body {
     gap: 1.25rem; /* Reverted gap */
 }
 
+/* Prevent overly wide cards on large monitors */
+#project .project-container {
+    max-width: 1200px;
+    margin: 0 auto; /* center within the section */
+    padding-inline: 0.5rem; /* small side breathing room */
+}
+
 .project-preview {
     background-color: white;
-    padding: 0.625rem; /* Reverted padding */
-    padding-bottom: 1rem;
+    padding: 1rem 1rem 2rem; /* Increased padding for better spacing */
     border: 1px solid #ccc;
     width: calc(100% - 1.25rem); /* Reverted width calculation */
     box-sizing: border-box;
+    border-radius: 10px; /* Rounded corners for project boxes */
+    overflow: hidden; /* Ensure children respect rounded corners */
+    position: relative; /* allow positioned badges */
 }
 
 /* Modal styles */
@@ -112,7 +145,7 @@ body {
 }
 
 @media (min-width: 768px) {
-    #about p {
+    #home p {
         width: 50%;
     }
 
@@ -149,6 +182,48 @@ a {
     max-width: 50vh;
 }
 
+/* Skills chips */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.skill-chip {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    padding: 0.4rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.9rem;
+}
+
+/* Experience cards */
+.experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.experience-item {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.experience-item h3 {
+    margin: 0 0 0.25rem 0;
+}
+
+.exp-meta {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
 /* Utility and control styles for View more */
 .hidden {
     display: none !important;
@@ -177,6 +252,11 @@ a {
 
 #contact-resume:visited {
     color: blue;
+}
+
+/* Footer/trademark alignment */
+.trademark {
+    text-align: center;
 }
 
 .project-button {
@@ -212,4 +292,19 @@ a {
 .project-links a {
     display: inline-flex;
     align-items: center;
+}
+
+/* Date tag badge on project cards */
+.date-tag {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background-color: rgba(52, 73, 94, 0.08); /* soft slate tint */
+    color: #505555; /* muted text */
+    font-size: 0.7rem;
+    letter-spacing: 0.01em;
+    padding: 0.2rem 0.45rem;
+    border-radius: 9999px;
+    border: 1px solid #d1d5db; /* subtle border */
+    box-shadow: none;
 }

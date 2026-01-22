@@ -85,7 +85,44 @@ window.addEventListener('load', () => {
     handleResize();
     // Wait a frame to ensure fonts/layout settle, then equalize
     requestAnimationFrame(() => equalizeProjectCardHeights());
+
+    // Populate date tags from data-date attributes if provided
+    const cards = document.querySelectorAll('.project-preview');
+    cards.forEach(card => {
+        const raw = card.getAttribute('data-date');
+        const tag = card.querySelector('.date-tag');
+        if (!tag) return;
+        if (!raw) return; // keep placeholder if no date
+        const formatted = formatDateBadge(raw);
+        if (formatted) {
+            tag.textContent = formatted;
+            tag.setAttribute('aria-label', `Project date: ${formatted}`);
+        }
+    });
 });
+
+// Accepts ISO-like strings (YYYY, YYYY-MM, YYYY-MM-DD)
+function formatDateBadge(input) {
+    try {
+        const parts = input.split('-');
+        if (parts.length === 1 && /^\d{4}$/.test(parts[0])) {
+            return parts[0];
+        }
+        if (parts.length >= 2) {
+            const year = parts[0];
+            const month = parts[1];
+            const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+            const mIndex = parseInt(month, 10) - 1;
+            if (!isNaN(mIndex) && mIndex >= 0 && mIndex < 12) {
+                return `${monthNames[mIndex]} ${year}`;
+            }
+            return year; // fallback
+        }
+    } catch (_) {
+        return null;
+    }
+    return null;
+}
 
 document.getElementById('currentYear').textContent = new Date().getFullYear();
 
